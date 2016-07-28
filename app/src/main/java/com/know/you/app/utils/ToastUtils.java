@@ -21,7 +21,7 @@ public class ToastUtils {
 		superToast.setIconPosition(Style.ICONPOSITION_LEFT);
 		superToast.setDuration(Style.DURATION_SHORT);
 		superToast.setText(content);
-		superToast.setTextSize(Style.TEXTSIZE_VERY_SMALL);
+		superToast.setTextSize(Style.TEXTSIZE_SMALL);
 		superToast.setColor(context.getResources().getColor(R.color.bg_toast_black));
 		superToast.show();
 	}

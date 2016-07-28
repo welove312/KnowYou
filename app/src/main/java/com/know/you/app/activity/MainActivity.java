@@ -1,10 +1,10 @@
 package com.know.you.app.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.know.you.app.R;
 import com.know.you.app.utils.ToastUtils;
@@ -18,20 +18,28 @@ import butterknife.OnClick;
  */
 public class MainActivity extends BaseActivity {
 
-@BindView(R.id.btn_zhiren)
-    Button btn_zhiren;
+    @BindView(R.id.tv_zhiren)
+    TextView tvZhiren;
+    @BindView(R.id.btn_zhiren)
+    Button btnZhiren;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        Log.e("test","=============="+btn_zhiren);
+        Log.e("test", "==============" + btnZhiren);
     }
 
-    @OnClick(R.id.btn_zhiren)
-    public void sayHi(Button btn){
-        Log.e("test","==============");
-        ToastUtils.short_toast(mContext,btn.getText().toString());
+
+
+    @OnClick({R.id.tv_zhiren, R.id.btn_zhiren})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.tv_zhiren:
+                break;
+            case R.id.btn_zhiren:
+                break;
+        }
     }
 }

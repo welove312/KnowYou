@@ -5,13 +5,10 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.View.OnClickListener;
 import android.view.Window;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
-
-import butterknife.ButterKnife;
 
 /**
  * Created by xiaojunzi on 16-7-28.
@@ -29,7 +26,6 @@ public abstract class BaseActivity<T> extends FragmentActivity{
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		mContext = this;
 		res = mContext.getResources();
-		ButterKnife.bind(this);
 	}
 
 
