@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">KnowYou</string>
+    <string name="app_name">知人</string>
+    <string name="app_logout_hint">再按一次退出知人</string>
 </resources>
