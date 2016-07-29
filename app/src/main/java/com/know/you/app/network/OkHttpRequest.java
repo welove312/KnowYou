@@ -142,6 +142,14 @@ public class OkHttpRequest {
     }
 
     public void request(Request request, ResultCallback callback) {
-
+        ThreadPoolManager threadPoolManager=ThreadPoolManager.getInstance();;
+        if(request.showProgress){
+            dialog = new LoadingDialog(request.context, request.context.getString(R.string.dialog_loading));
+            dialog.setCanceledOnTouchOutside(true);
+            dialog.show();
+        }
+        BaseHandler handler = new BaseHandler(request.context, callback, request);
+        BaseTask taskThread = new BaseTask(request.context, request, handler);
+        threadPoolManager.addTask(taskThread);
     }
 }

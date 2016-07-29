@@ -83,6 +83,7 @@ public class MainActivity extends BaseActivity {
             case R.id.tv_zhiren:
                 break;
             case R.id.btn_zhiren:
+                Log.e("test","===========>>>>");
                 test();
                 break;
         }
