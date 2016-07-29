@@ -3,6 +3,7 @@ package com.know.you.app.network;
 import android.content.Context;
 
 import com.know.you.app.parser.JsonParser;
+import com.know.you.app.parser.Parser;
 
 import java.util.HashMap;
 
@@ -17,7 +18,7 @@ public class Request {
     /** 请求参数 */
     public HashMap<String, Object> paramMap=new HashMap<String, Object>();
     /** Json数据解析模版 */
-    public JsonParser<?> jsonParser;
+    public Parser<?> jsonParser;
     /** 请求方式；默认为get */
     public int reqMethod = NetConfig.HTTP_GET;
     /** 是否为绝对Url请求 */
