@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- common color -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <!-- text color -->
+    <color name="text_tab_off">#8F9BA9</color>
+    <color name="text_tab_on">#B92B27</color>
+
 
     <!-- background color -->
+    <color name="bg_app">#ffffff</color>
     <color name="bg_toast_black">#e0000000</color>
+    <color name="bg_h_line">#E0E2E3</color>
 </resources>

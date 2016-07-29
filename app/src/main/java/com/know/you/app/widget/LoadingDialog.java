@@ -19,7 +19,6 @@ public class LoadingDialog extends AlertDialog {
 
 	public LoadingDialog(Context context) {
 		super(context);
-		message = getContext().getResources().getString(R.string.dialog_loading);
 	}
 
 	public LoadingDialog(Context context, String message) {
@@ -38,17 +37,6 @@ public class LoadingDialog extends AlertDialog {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.dialog_loading);
-		tips_loading_msg = (TextView) findViewById(R.id.dialog_loading_msg);
-		tips_loading_msg.setText(this.message);
-	}
-
-	public void setText(String message) {
-		this.message = message;
-		tips_loading_msg.setText(this.message);
-	}
-
-	public void setText(int resId) {
-		setText(getContext().getResources().getString(resId));
 	}
 
 }
