@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.know.you.app">
 
     <uses-sdk
@@ -18,11 +19,16 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/app_name">
@@ -32,6 +38,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- common module -->
+
+        <!-- home module -->
+        <activity
+            android:name=".activity.NaviHomeActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

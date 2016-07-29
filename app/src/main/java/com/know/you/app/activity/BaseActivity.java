@@ -26,9 +26,17 @@ public abstract class BaseActivity<T> extends FragmentActivity{
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		mContext = this;
 		res = mContext.getResources();
+		initView();
 	}
 
+	private void initView() {
+		loadViewLayout();
+		processLogic();
+	}
 
+	protected abstract void loadViewLayout();
+
+	protected abstract void processLogic();
 
 	/**
 	 * 通过类名启动Activity

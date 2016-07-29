@@ -1,16 +1,157 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_app" >
 
-    <TextView android:id="@+id/tv_zhiren"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <Button android:id="@+id/btn_zhiren"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="知人"/>
-</LinearLayout>
+    <!-- TabHost navigation,use RadioButton to change view rather than TabWidget(gone). -->
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- tabcontent -->
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+
+            <!-- TabHost must containts TabWidget,however we could let tabs gone. -->
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/main_bottom_tab_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="51dp" >
+
+                <LinearLayout
+                    android:id="@+id/main_bottom_tab_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+
+                        <Button
+                            android:id="@+id/btn_tab_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:drawableTop="@drawable/btn_tab_home_off"
+                            android:paddingBottom="2dip"
+                            android:paddingTop="8dip"
+                            android:scaleType="matrix"
+                            android:gravity="center"
+                            android:text="首页"
+                            android:textColor="@color/text_tab_off"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:id="@+id/btn_tab_ask"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:drawableTop="@drawable/btn_tab_ask_off"
+                            android:paddingBottom="2dip"
+                            android:paddingTop="8dip"
+                            android:scaleType="matrix"
+                            android:text="提问"
+                            android:textColor="@color/text_tab_off"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:id="@+id/btn_tab_seat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:drawableTop="@drawable/btn_tab_seat_off"
+                            android:paddingBottom="2dip"
+                            android:paddingTop="8dip"
+                            android:scaleType="matrix"
+                            android:text="茶座"
+                            android:textColor="@color/text_tab_off"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:id="@+id/btn_tab_star"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:drawableTop="@drawable/btn_tab_seat_off"
+                            android:paddingBottom="2dip"
+                            android:paddingTop="8dip"
+                            android:scaleType="matrix"
+                            android:text="大咖"
+                            android:textColor="@color/text_tab_off"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <Button
+                            android:id="@+id/btn_tab_me"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:drawableTop="@drawable/btn_tab_me_off"
+                            android:paddingBottom="2dip"
+                            android:paddingTop="8dip"
+                            android:scaleType="matrix"
+                            android:text="我"
+                            android:textColor="@color/text_tab_off"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_above="@id/main_bottom_tab_ll"
+                    android:background="@color/bg_h_line" >
+                </View>
+            </RelativeLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

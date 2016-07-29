@@ -1,14 +1,15 @@
 package com.know.you.app;
 
 import android.app.Application;
-import android.text.TextUtils;
 
 import com.know.you.app.common.CrashHandler;
-import com.know.you.app.common.ImageLoaderBuilder;
-import com.know.you.app.utils.FileUtils;
+import com.know.you.app.common.AppLoaderBuilder;
 import com.know.you.app.utils.LogUtils;
+import com.zhy.http.okhttp.OkHttpUtils;
 
-import java.io.File;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
 
 /**
  * Created by xiaojunzi on 16-7-28.
@@ -20,13 +21,8 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ImageLoaderBuilder.getInstance().initImageLoader(getApplicationContext());//初始化ImageLoader
-        if (!LogUtils.DEBUG) {// no debug handle this function
-            CrashHandler.getInstance().init(getApplicationContext()); // 程序全局异常处理
-        }
-
         instance = this;
-
+        AppLoaderBuilder.getInstance().appInit(this);
 
     }
 
@@ -36,6 +32,5 @@ public class MyApplication extends Application {
 
     //应用全局函数
     //==========================================================
-
 
 }
