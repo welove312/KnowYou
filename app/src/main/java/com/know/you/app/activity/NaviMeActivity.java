@@ -1,6 +1,8 @@
 package com.know.you.app.activity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.know.you.app.R;
 import com.know.you.app.network.NetConfig;
@@ -12,12 +14,17 @@ import com.know.you.app.utils.ToastUtils;
 
 import java.util.HashMap;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by zixiaojun on 16/7/30.
  */
 public class NaviMeActivity extends BaseNaviActivity {
+    @BindView(R.id.btn_test)
+    Button btnTest;
+
     @Override
     protected void initView(Bundle savedInstanceState) {
         this.loadContextView(R.layout.activity_navi_me);
@@ -65,5 +72,15 @@ public class NaviMeActivity extends BaseNaviActivity {
 
             }
         });
+    }
+
+    @OnClick(R.id.btn_test)
+    public void onButtonClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_test:
+                ToastUtils.short_toast(mContext,"带你脱单，带你飞");
+                break;
+
+        }
     }
 }
