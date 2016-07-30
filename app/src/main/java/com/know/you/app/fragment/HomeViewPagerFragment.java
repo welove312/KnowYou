@@ -49,7 +49,7 @@ public class HomeViewPagerFragment extends BaseFragment implements BGARefreshLay
         rlListviewRefresh.setRefreshViewHolder(new BGANormalRefreshViewHolder(mContext, true));
         lvListview.setAdapter(mAskContentViewAdapter);
 
-        
+
         mDataList=new ArrayList<String>();
         mDataList.add("1");mDataList.add("1");mDataList.add("1");
         mDataList.add("1");mDataList.add("1");mDataList.add("1");
