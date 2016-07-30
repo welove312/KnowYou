@@ -21,14 +21,18 @@ android {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':magicindicator')
     compile 'com.android.support:appcompat-v7:24.1.0'
-    compile 'in.srain.cube:ultra-ptr:1.0.11'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'com.zhy:okhttputils:2.6.2'
     compile 'com.wang.avi:library:1.0.5'
+    compile 'com.android.support:recyclerview-v7:24.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.nineoldandroids:library:2.4.0'
+    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.6@aar'
+    compile 'cn.bingoogolapple:bga-adapter:1.1.0@aar'
 }

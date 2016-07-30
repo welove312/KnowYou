@@ -31,6 +31,7 @@
         tools:replace="android:icon">
         <activity
             android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,6 +45,13 @@
         <!-- home module -->
         <activity
             android:name=".activity.NaviHomeActivity"
+            android:screenOrientation="portrait" />
+
+
+
+        <!-- me module -->
+        <activity
+            android:name=".activity.NaviMeActivity"
             android:screenOrientation="portrait" />
 
     </application>

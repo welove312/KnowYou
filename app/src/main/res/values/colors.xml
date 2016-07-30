@@ -10,7 +10,8 @@
 
 
     <!-- background color -->
-    <color name="bg_app">#ffffff</color>
+    <color name="bg_app">#FFFFFF</color>
     <color name="bg_toast_black">#e0000000</color>
     <color name="bg_h_line">#E0E2E3</color>
+    <color name="bg_indicator">#B92B27</color>
 </resources>

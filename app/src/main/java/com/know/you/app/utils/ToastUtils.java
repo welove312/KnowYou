@@ -8,10 +8,7 @@ import android.widget.Toast;
 import com.know.you.app.R;
 
 /**
- * @author:zixiaojun
- * @email:zixiaojun@shepinxiu.com
- * @date:2014-10-28 上午10:03:33
- * @copyright:时尚酷品
+ * Created by xiaojunzi on 16-7-28.
  */
 public class ToastUtils {
     public static void short_toast(Context context, String content) {

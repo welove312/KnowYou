@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ll_navi_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_app"
     android:orientation="vertical" >
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/indicator_home"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/bg_indicator"/>
+    <FrameLayout
+        style="@style/MatchAuto">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpager_home"
+            style="@style/MatchMatch"
+            android:background="@android:color/white" />
+
+    </FrameLayout>
     </LinearLayout>

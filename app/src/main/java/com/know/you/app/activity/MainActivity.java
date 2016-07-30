@@ -48,13 +48,13 @@ public class MainActivity extends TabActivity {
         mTabHost.addTab(mTabHost.newTabSpec("home").setIndicator("home")
                 .setContent(new Intent(this, NaviHomeActivity.class)));
         mTabHost.addTab(mTabHost.newTabSpec("ask").setIndicator("ask")
-                .setContent(new Intent(this, NaviHomeActivity.class)));
+                .setContent(new Intent(this, NaviMeActivity.class)));
         mTabHost.addTab(mTabHost.newTabSpec("seat").setIndicator("seat")
-                .setContent(new Intent(this, NaviHomeActivity.class)));
+                .setContent(new Intent(this, NaviMeActivity.class)));
         mTabHost.addTab(mTabHost.newTabSpec("star").setIndicator("star")
-                .setContent(new Intent(this, NaviHomeActivity.class)));
+                .setContent(new Intent(this, NaviMeActivity.class)));
         mTabHost.addTab(mTabHost.newTabSpec("me").setIndicator("me")
-                .setContent(new Intent(this, NaviHomeActivity.class)));
+                .setContent(new Intent(this, NaviMeActivity.class)));
 
     }
 

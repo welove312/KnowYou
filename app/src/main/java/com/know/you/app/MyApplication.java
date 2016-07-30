@@ -2,12 +2,7 @@ package com.know.you.app;
 
 import android.app.Application;
 
-import com.know.you.app.common.CrashHandler;
-import com.know.you.app.common.AppLoaderBuilder;
-import com.know.you.app.utils.LogUtils;
-import com.zhy.http.okhttp.OkHttpUtils;
-
-import java.util.concurrent.TimeUnit;
+import com.know.you.app.common.AppLoaderHelper;
 
 import okhttp3.OkHttpClient;
 
@@ -22,7 +17,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        AppLoaderBuilder.getInstance().appInit(this);
+        AppLoaderHelper.getInstance().appInit(this);
 
     }
 
